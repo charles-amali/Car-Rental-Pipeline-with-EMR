@@ -4,7 +4,7 @@
 This project implements an automated analytics pipeline for a car rental marketplace using AWS services including EMR, Step Functions, Glue, and Athena. The pipeline processes rental transaction data, computes various KPIs, and generates insights about vehicle utilization, location performance, and user behavior.
 
 ## Architecture
-![Architecture Diagram](@images/architecture.png)
+![Architecture Diagram](images/architectural_diagram(emr).jpg)
 - **Data Processing**: AWS EMR cluster running Spark jobs
 - **Workflow Orchestration**: AWS Step Functions
 - **Data Catalog**: AWS Glue
@@ -32,7 +32,8 @@ Multiple workflow options available:
 
 [![Step Function Diagram](images/car-rental-flow.png)]
 
-[![Step Function Diagram](images/car-rental-step-flow.png.png)]
+[![Step Function Diagram](images/car-rental-step-flow.png)]
+
 *After a successful completion of the EMR cluster processing, the workflow triggers Athena queries stored in S3. The results are saved back to S3.*
 
 ## Setup and Dependencies
