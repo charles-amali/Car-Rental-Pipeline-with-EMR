@@ -30,11 +30,13 @@ Raw data stored in S3 under `s3://your-bucket/raw/`:
 Multiple workflow options available:
 - `step_function_orchestration.json`: Analytics-focused workflow with dynamic query processing
 
-[![Step Function Diagram](images/car-rental-flow.png)]
+[!Step Function Diagram](images/car-rental-flow.png)
 
-[![Step Function Diagram](images/car-rental-step-flow.png)]
 
-*After a successful completion of the EMR cluster processing, the workflow triggers Athena queries stored in S3. The results are saved back to S3.*
+
+[!Step Function Diagram](images/car-rental-step-flow.png)
+
+*After a successful completion of the EMR cluster processing, the workflow triggers glue crawler to update the data catalog and then executes Athena queries to generate insights.*
 
 ## Setup and Dependencies
 
